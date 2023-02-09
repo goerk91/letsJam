@@ -1,7 +1,5 @@
 # Musik Plattform zum Connecten [Name?]
 
-// Adesso Notebook Projekt konfiguriert
-
 - Problem: Musiker außerhalb der eigenen Bubble finden?
 - Lösung:
 - Musiker zusammenbringen

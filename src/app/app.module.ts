@@ -7,16 +7,9 @@ import { AppComponent } from './app.component';
 import { OnboardingWizzardComponent } from './onboarding-wizzard/onboarding-wizzard.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    OnboardingWizzardComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatSlideToggleModule
-  ],
+  declarations: [AppComponent, OnboardingWizzardComponent],
+  imports: [BrowserModule, AppRoutingModule, MatSlideToggleModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

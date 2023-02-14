@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 20vw);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "stepper stepper stepper"
+    "select select select "
+    "select select select "
+    "select select select "
+    "select select select ";
+}
+
+.item1 {
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  grid-area: stepper;
+  background-color: rgb(221, 220, 220);
+}
+
+.item2 {
+  grid-area: select;
+  background-color: rgb(76, 158, 76);
+}

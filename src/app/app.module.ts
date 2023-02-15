@@ -11,9 +11,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { MAT_STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { ButtonComponent } from './components/atoms/button/button.component';
 
 @NgModule({
-  declarations: [AppComponent, OnboardingWizzardComponent],
+  declarations: [AppComponent, OnboardingWizzardComponent, ButtonComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

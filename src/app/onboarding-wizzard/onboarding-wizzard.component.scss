@@ -1,25 +1,33 @@
 .container {
-  display: grid;
-  grid-template-columns: repeat(3, 20vw);
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas:
-    "stepper stepper stepper"
-    "select select select "
-    "select select select "
-    "select select select ";
-}
-
-.item1 {
   display: flex;
-  box-sizing: border-box;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  grid-area: stepper;
-  background-color: rgb(221, 220, 220);
+  box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.2);
+  min-height: 70vh;
+  width: 80vw;
 }
 
-.item2 {
-  grid-area: select;
-  background-color: rgb(76, 158, 76);
+.inner-container {
+  width: 100%;
+  margin: 0;
+  background-color: rgb(199, 172, 172);
 }
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  height: 50vh;
+  background-color: rgb(255, 255, 255);
+}
+
+.button-next {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+// ::ng-deep {
+//   .mat-horizontal-stepper-content {
+//     display: flex;
+//     justify-content: center;
+//   }
+// }

@@ -1,13 +1,42 @@
 <form [formGroup]="wizzardForm">
   <div class="container">
-    <div class="item1">
+    <!-- den stepper in einem weitern div setzen und diesen auf 100% width -->
+    <div class="inner-container">
       <mat-horizontal-stepper [labelPosition]="'bottom'">
-        <mat-step label="name"><mat-icon>home</mat-icon> </mat-step>
-        <mat-step label="instrument"> </mat-step>
-        <mat-step label="fortschritt"> </mat-step>
-        <mat-step label="genre"> </mat-step>
+        <mat-step label="name" state="badge">
+          <div class="content-container">
+            <div class="content">123</div>
+            <div class="button-next">
+              <button>NEXT</button>
+            </div>
+          </div>
+        </mat-step>
+        <mat-step label="instrument" state="piano"> oooooooo</mat-step>
+
+        <mat-step label="progress" state="star"> </mat-step>
+
+        <mat-step label="genre" state="music_note"> </mat-step>
+        <!-- Icon overrides. -->
+        <ng-template matStepperIcon="badge">
+          <mat-icon>badge</mat-icon>
+        </ng-template>
+
+        <ng-template matStepperIcon="piano">
+          <mat-icon>piano</mat-icon>
+        </ng-template>
+
+        <ng-template matStepperIcon="floor">
+          <mat-icon>star</mat-icon>
+        </ng-template>
+
+        <ng-template matStepperIcon="piano">
+          <mat-icon>piano</mat-icon>
+        </ng-template>
+
+        <ng-template matStepperIcon="music_note">
+          <mat-icon>music_note</mat-icon>
+        </ng-template>
       </mat-horizontal-stepper>
     </div>
-    <div class="item2"></div>
   </div>
 </form>

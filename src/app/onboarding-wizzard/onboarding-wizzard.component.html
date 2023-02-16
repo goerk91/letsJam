@@ -1,21 +1,57 @@
+<!-- Content 2 wird übersprungen! Warum? -->
+
 <form [formGroup]="wizzardForm">
   <div class="container">
-    <!-- den stepper in einem weitern div setzen und diesen auf 100% width -->
     <div class="inner-container">
       <mat-horizontal-stepper [labelPosition]="'bottom'">
-        <mat-step label="name" state="badge">
+        <!-- Mat Steps wiederholen sich. Hier mit einer For-Schleife
+           programmieren und die Mat-Steps auf 1 Template reduzieren -->
+        <mat-step label="Name" state="badge">
           <div class="content-container">
-            <div class="content">123</div>
-            <div class="button-next">
-              <button>NEXT</button>
+            <div class="content">
+              <div>
+                <app-input placeholder="Enter your Name" type="text">
+                </app-input>
+              </div>
+            </div>
+            <div class="button-container">
+              <app-button [text]="'Next'"></app-button>
             </div>
           </div>
         </mat-step>
-        <mat-step label="instrument" state="piano"> oooooooo</mat-step>
 
-        <mat-step label="progress" state="star"> </mat-step>
+        <mat-step label="Instrument" state="piano">
+          <div class="content-container">
+            <div class="content">Content 2</div>
+            <div class="button-container">
+              <app-button [text]="'Next'"></app-button>
+            </div>
+          </div>
+        </mat-step>
+        <!-- Button directive ist static (siehe button-component).
+          Attribut: matStepperPrevious & matStepperNext müssen von außerhalb
+          übergebar sein
+        Das muss dynamisch werden
+        von außerhalb konfigurierbar sein -> wie? Custom Directive?
+        -->
+        <mat-step label="Progress" state="star">
+          <div class="content-container">
+            <div class="content">Content 3</div>
+            <div class="button-container">
+              <app-button [text]="'Next'"></app-button>
+              <button mat-button matStepperPrevious>Back</button>
+            </div>
+          </div>
+        </mat-step>
 
-        <mat-step label="genre" state="music_note"> </mat-step>
+        <mat-step label="Genre" state="music_note">
+          <div class="content-container">
+            <div class="content">Content 4</div>
+            <div class="button-container">
+              <app-button [text]="'Next'"></app-button>
+            </div>
+          </div>
+        </mat-step>
         <!-- Icon overrides. -->
         <ng-template matStepperIcon="badge">
           <mat-icon>badge</mat-icon>

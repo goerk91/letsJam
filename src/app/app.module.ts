@@ -6,15 +6,21 @@ import { AppComponent } from './app.component';
 import { OnboardingWizzardComponent } from './onboarding-wizzard/onboarding-wizzard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonComponent } from './components/atoms/button/button.component';
+import { InputComponent } from './components/atoms/input/input.component';
 
 //MaterialUI
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { MAT_STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { ButtonComponent } from './components/atoms/button/button.component';
 
 @NgModule({
-  declarations: [AppComponent, OnboardingWizzardComponent, ButtonComponent],
+  declarations: [
+    AppComponent,
+    OnboardingWizzardComponent,
+    ButtonComponent,
+    InputComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

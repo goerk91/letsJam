@@ -22,9 +22,12 @@
 
         <mat-step label="Instrument" state="piano">
           <div class="content-container">
-            <div class="content">Content 2</div>
+            <div class="content">
+              <p style="font-size: 50px; color: blue">Content 2</p>
+            </div>
             <div class="button-container">
               <app-button [text]="'Next'"></app-button>
+              <button mat-button matStepperPrevious>Back</button>
             </div>
           </div>
         </mat-step>
@@ -36,7 +39,9 @@
         -->
         <mat-step label="Progress" state="star">
           <div class="content-container">
-            <div class="content">Content 3</div>
+            <div class="content">
+              <p style="font-size: 50px; color: blue">Content 3</p>
+            </div>
             <div class="button-container">
               <app-button [text]="'Next'"></app-button>
               <button mat-button matStepperPrevious>Back</button>
@@ -46,9 +51,12 @@
 
         <mat-step label="Genre" state="music_note">
           <div class="content-container">
-            <div class="content">Content 4</div>
+            <div class="content">
+              <p style="font-size: 50px; color: blue">Content 4</p>
+            </div>
             <div class="button-container">
               <app-button [text]="'Next'"></app-button>
+              <button mat-button matStepperPrevious>Back</button>
             </div>
           </div>
         </mat-step>

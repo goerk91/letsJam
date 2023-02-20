@@ -13,7 +13,7 @@ import { InputComponent } from './components/atoms/input/input.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
-import { MAT_STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { MAT_STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     {
-      provide: MAT_STEPPER_GLOBAL_OPTIONS,
+      provide: STEPPER_GLOBAL_OPTIONS,
       useValue: { displayDefaultIndicatorType: false },
     },
   ],

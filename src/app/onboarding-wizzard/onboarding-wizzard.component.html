@@ -23,12 +23,22 @@
         <mat-step label="Instrument" state="piano">
           <div class="content-container">
             <div class="content">
-              <p style="font-size: 50px; color: blue">Content 2</p>
+              <mat-form-field appearance="fill">
+                <mat-label>Main Instrument</mat-label>
+                <mat-select>
+                  <mat-option
+                    *ngFor="let instrument of instruments"
+                    [value]="instrument"
+                  >
+                    {{ instrument }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
             </div>
             <div class="button-container">
               <app-button [text]="'Next'"></app-button>
-              <button mat-button color="accent" matStepperPrevious>
-                Previous
+              <button mat-button color="acccent" matStepperPrevious>
+                PREVIOUS
               </button>
             </div>
           </div>
@@ -46,14 +56,16 @@
                 <mat-chip-option color="primary" selected
                   >Beginer</mat-chip-option
                 >
-                <mat-chip-option>Intermediate</mat-chip-option>
-                <mat-chip-option>Professional</mat-chip-option>
-                <mat-chip-option>Top G</mat-chip-option>
+                <mat-chip-option color="accent">Intermediate</mat-chip-option>
+                <mat-chip-option color="accent">Professional</mat-chip-option>
+                <mat-chip-option color="accent">Top G</mat-chip-option>
               </mat-chip-listbox>
             </div>
             <div class="button-container">
               <app-button [text]="'Next'"></app-button>
-              <button mat-button matStepperPrevious>Previous</button>
+              <button mat-button matStepperPrevious color="primary">
+                PREVIOUS
+              </button>
             </div>
           </div>
         </mat-step>
@@ -61,11 +73,29 @@
         <mat-step label="Genre" state="music_note">
           <div class="content-container">
             <div class="content">
-              <p style="font-size: 50px; color: blue">Content 4</p>
+              <div
+                style="background-color: white; padding: 20px"
+                [formGroup]="genres"
+              >
+                <p>
+                  <mat-checkbox color="pimary" formControlName="hiphop"
+                    >Hip Hop</mat-checkbox
+                  >
+                </p>
+                <p>
+                  <mat-checkbox formControlName="rnb">RnB</mat-checkbox>
+                </p>
+                <p>
+                  <mat-checkbox formControlName="classic">Classic</mat-checkbox>
+                </p>
+                <p>
+                  <mat-checkbox formControlName="metal">Metal</mat-checkbox>
+                </p>
+              </div>
             </div>
             <div class="button-container">
-              <app-button [text]="'Next'"></app-button>
-              <button mat-button matStepperPrevious>Previous</button>
+              <app-button [text]="'Submit'"></app-button>
+              <button mat-button matStepperPrevious>PREVIOUS</button>
             </div>
           </div>
         </mat-step>

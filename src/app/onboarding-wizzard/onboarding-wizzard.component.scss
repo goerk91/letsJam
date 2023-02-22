@@ -7,8 +7,8 @@
 
 .inner-container {
   width: 100%;
+  height: 100%;
   margin: 0;
-  background-color: rgb(199, 172, 172);
 }
 
 .content-container {
@@ -19,7 +19,9 @@
   margin: 0 auto;
   width: 80%;
   height: 50vh;
-  background-color: rgb(49, 189, 31);
+  background-image: url("../../assets/background/music-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .button-container {
@@ -44,7 +46,6 @@
   flex-flow: column wrap;
   width: 100%;
   height: 80%;
-  background-image: url("../../assets/background/music-banner.jpg");
 }
 
 // ::ng-deep {

@@ -1,5 +1,3 @@
-<!-- Content 2 wird übersprungen! Warum? -->
-
 <form [formGroup]="wizzardForm">
   <div class="container">
     <div class="inner-container">
@@ -47,7 +45,7 @@
           Attribut: matStepperPrevious & matStepperNext müssen von außerhalb
           übergebar sein
         Das muss dynamisch werden
-        von außerhalb konfigurierbar sein -> wie? Custom Directive?
+        von Parent-Element konfigurieren -> wie? Custom Directive?
         -->
         <mat-step label="Progress" state="star">
           <div class="content-container">
@@ -74,13 +72,15 @@
           <div class="content-container">
             <div class="content">
               <div
-                style="background-color: white; padding: 20px"
+                style="
+                  background-color: white;
+                  padding: 20px;
+                  border-radius: 20px;
+                "
                 [formGroup]="genres"
               >
                 <p>
-                  <mat-checkbox color="pimary" formControlName="hiphop"
-                    >Hip Hop</mat-checkbox
-                  >
+                  <mat-checkbox formControlName="hiphop">Hip Hop</mat-checkbox>
                 </p>
                 <p>
                   <mat-checkbox formControlName="rnb">RnB</mat-checkbox>
@@ -123,45 +123,3 @@
     </div>
   </div>
 </form>
-
-<!-- 
-   "@angular/material/prebuilt-themes/indigo-pink.css" in angular.json file unter:
-
-    "sourceRoot": "src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/lets-jam",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss",
-              "src/theme.scss"
-            ],
-
-
-  und 
-
-   "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss",
-              "src/theme.scss"
-            ],
-            "scripts": []
- -->

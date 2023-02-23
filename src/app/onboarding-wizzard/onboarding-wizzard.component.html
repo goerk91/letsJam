@@ -7,7 +7,13 @@
         <mat-step label="Name" state="badge">
           <div class="content-container">
             <div class="content">
-              <div>
+              <div
+                style="
+                  background-color: white;
+                  padding: 20px;
+                  border-radius: 20px;
+                "
+              >
                 <app-input placeholder="Enter your Name" type="text">
                 </app-input>
               </div>
@@ -50,14 +56,22 @@
         <mat-step label="Progress" state="star">
           <div class="content-container">
             <div class="content">
-              <mat-chip-listbox aria-label="Fish selection">
-                <mat-chip-option color="primary" selected
-                  >Beginer</mat-chip-option
-                >
-                <mat-chip-option color="accent">Intermediate</mat-chip-option>
-                <mat-chip-option color="accent">Professional</mat-chip-option>
-                <mat-chip-option color="accent">Top G</mat-chip-option>
-              </mat-chip-listbox>
+              <div
+                style="
+                  background-color: white;
+                  padding: 0px 5px;
+                  border-radius: 20px;
+                "
+              >
+                <mat-chip-listbox aria-label="Progress">
+                  <mat-chip-option color="primary" selected
+                    >Beginer</mat-chip-option
+                  >
+                  <mat-chip-option color="accent">Intermediate</mat-chip-option>
+                  <mat-chip-option color="accent">Professional</mat-chip-option>
+                  <mat-chip-option color="accent">Top G</mat-chip-option>
+                </mat-chip-listbox>
+              </div>
             </div>
             <div class="button-container">
               <app-button [text]="'Next'"></app-button>

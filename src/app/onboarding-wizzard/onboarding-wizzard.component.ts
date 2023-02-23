@@ -7,22 +7,49 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
   templateUrl: './onboarding-wizzard.component.html',
   styleUrls: ['./onboarding-wizzard.component.scss'],
 })
-export class OnboardingWizzardComponent {
+export class OnboardingWizzardComponent implements OnInit {
   instruments: string[] = ['Piano', 'Guitar', 'Saxophone', 'Bass', 'Drums'];
+  selectedInstrument: string;
+  wizzardForm: FormGroup;
 
-  genres = this._formBuilder.group({
-    hiphop: false,
-    rnb: false,
-    classic: false,
-    metal: false,
-  });
+  constructor(private fb: FormBuilder) {}
 
-  wizzardForm = new FormGroup({
-    name: new FormControl(''),
-    hauptinstrument: new FormControl(''),
-    einschaetzungInstrument: new FormControl(''),
-    genre: new FormControl(''),
-  });
+  ngOnInit(): void {
+    //FormGroups - wurden zusätzlich erstellt, da ein "error" im console log auftritt. Leider
+    // konnte ich diesen noch nicht beheben
+    const genreGroup = this.fb.group({
+      hiphop: false,
+      rnb: false,
+      classic: false,
+      metal: false,
+    });
 
-  constructor(private _formBuilder: FormBuilder) {}
+    const nameGroup = this.fb.group({
+      name: '',
+    });
+
+    const hauptinstrumentGroup = this.fb.group({
+      hauptinstrument: '',
+    });
+
+    const fortschrittGroup = this.fb.group({
+      fortschritt: '',
+    });
+
+    //Parent FormGroup
+    this.wizzardForm = this.fb.group({
+      name: nameGroup,
+      hauptinstrument: hauptinstrumentGroup,
+      fortschritt: fortschrittGroup,
+      genre: genreGroup,
+    });
+    //Test
+    this.wizzardForm.valueChanges.subscribe(console.log);
+  }
+
+  onSubmit() {
+    //Test
+    console.log('Submitted', this.wizzardForm);
+    this.wizzardForm.valueChanges.subscribe(console.log);
+  }
 }

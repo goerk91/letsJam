@@ -1,7 +1,7 @@
 <form [formGroup]="wizzardForm" (ngSubmit)="onSubmit()">
   <div class="container">
     <div class="inner-container">
-      <mat-horizontal-stepper [labelPosition]="'bottom'">
+      <mat-horizontal-stepper [labelPosition]="'bottom'" linear="true">
         <!-- Mat Steps wiederholen sich. Hier mit einer For-Schleife
            programmieren und die Mat-Steps auf 1 Template reduzieren -->
         <mat-step label="Name" state="badge">
@@ -39,7 +39,7 @@
                   <mat-option
                     *ngFor="let instrument of instruments"
                     [value]="instrument"
-                    >form
+                  >
                     {{ instrument }}
                   </mat-option>
                 </mat-select>
@@ -77,7 +77,9 @@
                   >
                   <mat-chip-option color="accent">Intermediate</mat-chip-option>
                   <mat-chip-option color="accent">Professional</mat-chip-option>
-                  <mat-chip-option color="accent">Top G</mat-chip-option>
+                  <mat-chip-option color="accent"
+                    >Advanced Professional</mat-chip-option
+                  >
                 </mat-chip-listbox>
               </div>
             </div>

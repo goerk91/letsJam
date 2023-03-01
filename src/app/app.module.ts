@@ -17,6 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { PreviousButtonComponent } from './components/atoms/previous-button/previous-button.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
     OnboardingWizzardComponent,
     ButtonComponent,
     InputComponent,
+    PreviousButtonComponent,
   ],
   imports: [
     BrowserModule,

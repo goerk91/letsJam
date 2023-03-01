@@ -1,8 +1,33 @@
 <button
+  [ngClass]="'nextstepper'"
+  *ngIf="stepperType === next"
   [disabled]="isDisabled"
   [type]="type"
   mat-button
   matStepperNext
+  class="button"
+>
+  {{ text }}
+</button>
+
+<button
+  [ngClass]="'previousStepper'"
+  *ngIf="stepperType === previous"
+  [disabled]="isDisabled"
+  [type]="type"
+  mat-button
+  matStepperPrevious
+  class="button"
+>
+  {{ text }}
+</button>
+
+<button
+  [ngClass]="'default'"
+  *ngIf="!previous && !next"
+  [disabled]="isDisabled"
+  [type]="type"
+  mat-button
   class="button"
 >
   {{ text }}

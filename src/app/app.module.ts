@@ -18,6 +18,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { PreviousButtonComponent } from './components/atoms/previous-button/previous-button.component';
+import { NewsComponent } from './news/news.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { PreviousButtonComponent } from './components/atoms/previous-button/prev
     ButtonComponent,
     InputComponent,
     PreviousButtonComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { PreviousButtonComponent } from './components/atoms/previous-button/prev
     MatFormFieldModule,
     MatSelectModule,
     MatCheckboxModule,
+    MatButtonModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

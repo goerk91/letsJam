@@ -16,6 +16,11 @@
   - Selbsteinschätzung mit dem Instrument
   - Abfrage nach Genres (optional)
     - 0-3 Genres
+- News
+  - Erste Seite, die nach dem Wizzard angezeigt wird
+  - Neueste Videos
+  - Kommentare
+  - Ähnlich wie bei Social Media (Instagram, Twitter,...)
 - Profilansicht (Konsument)
   - Avataranzeige
   - Pseudonym

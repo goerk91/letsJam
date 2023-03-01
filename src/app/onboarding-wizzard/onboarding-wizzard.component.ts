@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { StepperType } from '../enums/StepperType';
 
 @Component({
   selector: 'app-onboarding-wizzard',
@@ -11,6 +12,8 @@ export class OnboardingWizzardComponent implements OnInit {
   instruments: string[] = ['Piano', 'Guitar', 'Saxophone', 'Bass', 'Drums'];
   selectedInstrument: string;
   wizzardForm: FormGroup;
+  stepperNext = StepperType.next;
+  stepperPrevious = StepperType.previous;
 
   constructor(private fb: FormBuilder) {}
 

@@ -25,7 +25,11 @@
               </div>
             </div>
             <div class="button-container">
-              <app-button [type]="'button'" [text]="'Next'"></app-button>
+              <app-button
+                [stepperType]="stepperNext"
+                [type]="'button'"
+                [text]="'Next'"
+              ></app-button>
             </div>
           </div>
         </mat-step>
@@ -39,15 +43,23 @@
                   <mat-option
                     *ngFor="let instrument of instruments"
                     [value]="instrument"
-                    >form
+                  >
                     {{ instrument }}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
             </div>
             <div class="button-container">
-              <app-button [type]="'button'" [text]="'Next'"></app-button>
-              <app-previous-button></app-previous-button>
+              <app-button
+                [type]="'button'"
+                [text]="'Next'"
+                [stepperType]="stepperNext"
+              ></app-button>
+              <app-button
+                [stepperType]="stepperPrevious"
+                [type]="'button'"
+                [text]="'Back'"
+              ></app-button>
             </div>
           </div>
         </mat-step>
@@ -77,13 +89,23 @@
                   >
                   <mat-chip-option color="accent">Intermediate</mat-chip-option>
                   <mat-chip-option color="accent">Professional</mat-chip-option>
-                  <mat-chip-option color="accent">Top G</mat-chip-option>
+                  <mat-chip-option color="accent"
+                    >Advanced Professional</mat-chip-option
+                  >
                 </mat-chip-listbox>
               </div>
             </div>
             <div class="button-container">
-              <app-button [type]="'button'" [text]="'Next'"></app-button>
-              <app-previous-button></app-previous-button>
+              <app-button
+                [type]="'button'"
+                [text]="'Next'"
+                [stepperType]="stepperNext"
+              ></app-button>
+              <app-button
+                [stepperType]="stepperPrevious"
+                [type]="'button'"
+                [text]="'Back'"
+              ></app-button>
             </div>
           </div>
         </mat-step>
@@ -114,8 +136,16 @@
               </div>
             </div>
             <div class="button-container">
-              <app-button [type]="'submit'" [text]="'Submit'"></app-button>
-              <app-previous-button></app-previous-button>
+              <app-button
+                [type]="'button'"
+                [text]="'Submit'"
+                [stepperType]="stepperNext"
+              ></app-button>
+              <app-button
+                [stepperType]="stepperPrevious"
+                [type]="'button'"
+                [text]="'Back'"
+              ></app-button>
             </div>
           </div>
         </mat-step>

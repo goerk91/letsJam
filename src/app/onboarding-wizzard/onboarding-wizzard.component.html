@@ -47,9 +47,7 @@
             </div>
             <div class="button-container">
               <app-button [type]="'button'" [text]="'Next'"></app-button>
-              <button mat-button color="acccent" matStepperPrevious>
-                PREVIOUS
-              </button>
+              <app-previous-button></app-previous-button>
             </div>
           </div>
         </mat-step>
@@ -85,9 +83,7 @@
             </div>
             <div class="button-container">
               <app-button [type]="'button'" [text]="'Next'"></app-button>
-              <button mat-button matStepperPrevious color="primary">
-                PREVIOUS
-              </button>
+              <app-previous-button></app-previous-button>
             </div>
           </div>
         </mat-step>
@@ -119,7 +115,7 @@
             </div>
             <div class="button-container">
               <app-button [type]="'submit'" [text]="'Submit'"></app-button>
-              <button mat-button matStepperPrevious>PREVIOUS</button>
+              <app-previous-button></app-previous-button>
             </div>
           </div>
         </mat-step>

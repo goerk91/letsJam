@@ -38,6 +38,6 @@ export class OnboardingWizzardComponent implements OnInit {
     //Test
     console.log('Submitted', this.wizzardForm);
     this.wizzardForm.valueChanges.subscribe(console.log);
-    this.router.navigateByUrl('/news');
+    this.router.navigateByUrl('/home');
   }
 }

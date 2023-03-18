@@ -19,6 +19,7 @@ import { NewsComponent } from './news/news.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MatInputModule } from '@angular/material/input';
     OnboardingWizzardComponent,
     NewsComponent,
     PageNotFoundComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

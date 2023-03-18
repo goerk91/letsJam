@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { OnboardingWizzardComponent } from './onboarding-wizzard/onboarding-wizzard.component';
 import { NewsComponent } from './news/news.component';
+import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
     component: OnboardingWizzardComponent,
   },
   { path: 'news', component: NewsComponent },
+  { path: 'home', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

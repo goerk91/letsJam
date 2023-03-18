@@ -21,3 +21,20 @@
   height: 20vh;
   background-color: yellow;
 }
+
+.iconHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  margin-left: 45px;
+}
+
+.navBarHeader {
+  display: flex;
+  align-items: flex-end;
+  width: 70%;
+  height: 100%;
+  font-size: 25px;
+}

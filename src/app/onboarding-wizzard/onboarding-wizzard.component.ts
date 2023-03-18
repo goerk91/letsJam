@@ -25,23 +25,11 @@ export class OnboardingWizzardComponent implements OnInit {
       metal: false,
     });
 
-    const nameGroup = this.fb.group({
-      name: '',
-    });
-
-    const hauptinstrumentGroup = this.fb.group({
-      hauptinstrument: '',
-    });
-
-    const fortschrittGroup = this.fb.group({
-      fortschritt: '',
-    });
-
     //Parent FormGroup
     this.wizzardForm = this.fb.group({
-      name: nameGroup,
-      hauptinstrument: hauptinstrumentGroup,
-      fortschritt: fortschrittGroup,
+      nutzerName: '',
+      hauptinstrument: '',
+      fortschritt: '',
       genre: genreGroup,
     });
   }

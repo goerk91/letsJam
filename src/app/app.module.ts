@@ -20,6 +20,8 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { PreviousButtonComponent } from './components/atoms/previous-button/previous-button.component';
 import { NewsComponent } from './news/news.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatFormFieldModule,
     MatSelectModule,
     MatCheckboxModule,
+    MatButtonModule,
+    MatInputModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

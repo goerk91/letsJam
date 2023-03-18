@@ -1,4 +1,8 @@
-<form [formGroup]="wizzardForm" (ngSubmit)="onSubmit()">
+<form
+  [formGroup]="wizzardForm"
+  (ngSubmit)="onSubmit()"
+  (keydown.enter)="(false)"
+>
   <div class="container">
     <div class="inner-container">
       <mat-horizontal-stepper [labelPosition]="'bottom'" linear="true">
@@ -13,10 +17,9 @@
                   padding: 20px;
                   border-radius: 20px;
                 "
-                formGroupName="name"
               >
                 <app-input
-                  formControlName="name"
+                  formControlName="nutzerName"
                   placeholder="Enter your Name"
                   type="text"
                   ngDefaultControl
@@ -25,14 +28,22 @@
               </div>
             </div>
             <div class="button-container">
-              <app-button [type]="'button'" [text]="'Next'"></app-button>
+              <button
+                mat-raised-button
+                matStepperNext
+                type="button"
+                color="primary"
+                style="font-size: 18px"
+              >
+                NEXT
+              </button>
             </div>
           </div>
         </mat-step>
 
         <mat-step label="Instrument" state="piano">
           <div class="content-container">
-            <div class="content" formGroupName="hauptinstrument">
+            <div class="content">
               <mat-form-field appearance="fill">
                 <mat-label>Main Instrument</mat-label>
                 <mat-select formControlName="hauptinstrument">
@@ -46,8 +57,24 @@
               </mat-form-field>
             </div>
             <div class="button-container">
-              <app-button [type]="'button'" [text]="'Next'"></app-button>
-              <app-previous-button></app-previous-button>
+              <button
+                mat-raised-button
+                matStepperNext
+                type="button"
+                color="primary"
+                style="font-size: 18px"
+              >
+                NEXT
+              </button>
+              <button
+                mat-raised-button
+                matStepperPrevious
+                type="button"
+                color="accent"
+                style="font-size: 18px"
+              >
+                BACK
+              </button>
             </div>
           </div>
         </mat-step>
@@ -66,7 +93,6 @@
                   padding: 0px 5px;
                   border-radius: 20px;
                 "
-                formGroupName="fortschritt"
               >
                 <mat-chip-listbox
                   formControlName="fortschritt"
@@ -84,8 +110,24 @@
               </div>
             </div>
             <div class="button-container">
-              <app-button [type]="'button'" [text]="'Next'"></app-button>
-              <app-previous-button></app-previous-button>
+              <button
+                mat-raised-button
+                matStepperNext
+                type="button"
+                color="primary"
+                style="font-size: 18px"
+              >
+                NEXT
+              </button>
+              <button
+                mat-raised-button
+                matStepperPrevious
+                type="button"
+                color="accent"
+                style="font-size: 18px"
+              >
+                BACK
+              </button>
             </div>
           </div>
         </mat-step>
@@ -116,8 +158,24 @@
               </div>
             </div>
             <div class="button-container">
-              <app-button [type]="'submit'" [text]="'Submit'"></app-button>
-              <app-previous-button></app-previous-button>
+              <button
+                mat-raised-button
+                matStepperNext
+                type="submit"
+                color="primary"
+                style="font-size: 18px"
+              >
+                SUBMIT
+              </button>
+              <button
+                mat-raised-button
+                matStepperPrevious
+                type="button"
+                color="accent"
+                style="font-size: 18px"
+              >
+                BACK
+              </button>
             </div>
           </div>
         </mat-step>

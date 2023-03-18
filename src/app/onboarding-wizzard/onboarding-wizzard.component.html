@@ -1,53 +1,80 @@
-<form [formGroup]="wizzardForm" (ngSubmit)="onSubmit()">
+<form
+  [formGroup]="wizzardForm"
+  (ngSubmit)="onSubmit()"
+  (keydown.enter)="(false)"
+>
   <div class="container">
     <div class="inner-container">
-      <mat-horizontal-stepper [labelPosition]="'bottom'">
+      <mat-horizontal-stepper [labelPosition]="'bottom'" linear="true">
         <!-- Mat Steps wiederholen sich. Hier mit einer For-Schleife
            programmieren und die Mat-Steps auf 1 Template reduzieren -->
         <mat-step label="Name" state="badge">
           <div class="content-container">
             <div class="content">
-              <div
-                style="
-                  background-color: white;
-                  padding: 20px;
-                  border-radius: 20px;
-                "
-                formGroupName="name"
-              >
-                <app-input
-                  formControlName="name"
+              <!-- <app-input
+                  formControlName="nutzerName"
                   placeholder="Enter your Name"
                   type="text"
                   ngDefaultControl
                 >
-                </app-input>
-              </div>
+                </app-input> -->
+              <mat-form-field>
+                <input
+                  matInput
+                  formControlName="nutzerName"
+                  placeholder="Enter your Name"
+                  type="text"
+                />
+              </mat-form-field>
             </div>
             <div class="button-container">
-              <app-button [type]="'button'" [text]="'Next'"></app-button>
+              <button
+                mat-raised-button
+                matStepperNext
+                type="button"
+                color="primary"
+                style="font-size: 18px"
+              >
+                NEXT
+              </button>
             </div>
           </div>
         </mat-step>
 
         <mat-step label="Instrument" state="piano">
           <div class="content-container">
-            <div class="content" formGroupName="hauptinstrument">
+            <div class="content">
               <mat-form-field appearance="fill">
                 <mat-label>Main Instrument</mat-label>
                 <mat-select formControlName="hauptinstrument">
                   <mat-option
                     *ngFor="let instrument of instruments"
                     [value]="instrument"
-                    >form
+                  >
                     {{ instrument }}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
             </div>
             <div class="button-container">
-              <app-button [type]="'button'" [text]="'Next'"></app-button>
-              <app-previous-button></app-previous-button>
+              <button
+                mat-raised-button
+                matStepperNext
+                type="button"
+                color="primary"
+                style="font-size: 18px"
+              >
+                NEXT
+              </button>
+              <button
+                mat-raised-button
+                matStepperPrevious
+                type="button"
+                color="accent"
+                style="font-size: 18px"
+              >
+                BACK
+              </button>
             </div>
           </div>
         </mat-step>
@@ -66,7 +93,6 @@
                   padding: 0px 5px;
                   border-radius: 20px;
                 "
-                formGroupName="fortschritt"
               >
                 <mat-chip-listbox
                   formControlName="fortschritt"
@@ -77,13 +103,31 @@
                   >
                   <mat-chip-option color="accent">Intermediate</mat-chip-option>
                   <mat-chip-option color="accent">Professional</mat-chip-option>
-                  <mat-chip-option color="accent">Top G</mat-chip-option>
+                  <mat-chip-option color="accent"
+                    >Advanced Professional</mat-chip-option
+                  >
                 </mat-chip-listbox>
               </div>
             </div>
             <div class="button-container">
-              <app-button [type]="'button'" [text]="'Next'"></app-button>
-              <app-previous-button></app-previous-button>
+              <button
+                mat-raised-button
+                matStepperNext
+                type="button"
+                color="primary"
+                style="font-size: 18px"
+              >
+                NEXT
+              </button>
+              <button
+                mat-raised-button
+                matStepperPrevious
+                type="button"
+                color="accent"
+                style="font-size: 18px"
+              >
+                BACK
+              </button>
             </div>
           </div>
         </mat-step>
@@ -114,8 +158,24 @@
               </div>
             </div>
             <div class="button-container">
-              <app-button [type]="'submit'" [text]="'Submit'"></app-button>
-              <app-previous-button></app-previous-button>
+              <button
+                mat-raised-button
+                matStepperNext
+                type="submit"
+                color="primary"
+                style="font-size: 18px"
+              >
+                SUBMIT
+              </button>
+              <button
+                mat-raised-button
+                matStepperPrevious
+                type="button"
+                color="accent"
+                style="font-size: 18px"
+              >
+                BACK
+              </button>
             </div>
           </div>
         </mat-step>

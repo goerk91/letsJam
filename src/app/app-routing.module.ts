@@ -1,10 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { OnboardingWizzardComponent } from './onboarding-wizzard/onboarding-wizzard.component';
+import { NewsComponent } from './news/news.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'onboarding-wizzard', pathMatch: 'full' },
+  {
+    path: 'onboarding-wizzard',
+    component: OnboardingWizzardComponent,
+  },
+  { path: 'news', component: NewsComponent },
+  { path: '**', component: PageNotFoundComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

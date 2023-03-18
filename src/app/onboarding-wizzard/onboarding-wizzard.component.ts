@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-onboarding-wizzard',
@@ -12,7 +13,7 @@ export class OnboardingWizzardComponent implements OnInit {
   selectedInstrument: string;
   wizzardForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     //FormGroups - wurden zusätzlich erstellt, da ein "error" im console log auftritt. Leider
@@ -24,32 +25,19 @@ export class OnboardingWizzardComponent implements OnInit {
       metal: false,
     });
 
-    const nameGroup = this.fb.group({
-      name: '',
-    });
-
-    const hauptinstrumentGroup = this.fb.group({
-      hauptinstrument: '',
-    });
-
-    const fortschrittGroup = this.fb.group({
-      fortschritt: '',
-    });
-
     //Parent FormGroup
     this.wizzardForm = this.fb.group({
-      name: nameGroup,
-      hauptinstrument: hauptinstrumentGroup,
-      fortschritt: fortschrittGroup,
+      nutzerName: '',
+      hauptinstrument: '',
+      fortschritt: '',
       genre: genreGroup,
     });
-    //Test
-    this.wizzardForm.valueChanges.subscribe(console.log);
   }
 
   onSubmit() {
     //Test
     console.log('Submitted', this.wizzardForm);
     this.wizzardForm.valueChanges.subscribe(console.log);
+    this.router.navigateByUrl('/news');
   }
 }

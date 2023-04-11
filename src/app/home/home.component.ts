@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  navTopics: string[] = ['News', 'Jam', 'Profil', 'Settings'];
+  // navTopics: string[] = ['News', 'Jam', 'Profil', 'Settings'];
+  tabs: string[] = ['News', 'Jam', 'Profil', 'Settings'];
+  activatedTabIndex: number = 0;
+
+  tabChange(tabIndex: number) {
+    debugger;
+    this.activatedTabIndex = tabIndex;
+  }
 }

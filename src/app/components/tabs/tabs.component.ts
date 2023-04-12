@@ -12,7 +12,7 @@ export class TabsComponent {
 
   setTab(index: number) {
     this.activatedTab = index;
-    debugger;
+    // debugger;
     this.onTabChange.emit(this.activatedTab);
   }
 }

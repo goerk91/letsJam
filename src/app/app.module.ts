@@ -15,11 +15,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { NewsComponent } from './news/news.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NewsComponent } from './Pages/news/news.component';
+import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './Pages/home/home.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 
 @NgModule({

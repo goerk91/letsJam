@@ -1,14 +1,16 @@
 <div class="container">
   <div class="header">
     <div class="iconHeader">
-      <img src="../../assets/logo/logo.png" />
+      <a href="http://localhost:4200/home"
+        ><img src="../../assets/logo/logo.png"
+      /></a>
     </div>
     <div class="navBarHeader">
       <app-tabs [tabsArray]="tabs" (onTabChange)="tabChange($event)"></app-tabs>
     </div>
   </div>
   <div class="content">
-    <div *ngIf="activatedTabIndex == 0"><p>Panel 1</p></div>
+    <div *ngIf="activatedTabIndex == 0"><app-news></app-news></div>
     <div *ngIf="activatedTabIndex == 1"><p>Panel 2</p></div>
     <div *ngIf="activatedTabIndex == 2"><p>Panel 3</p></div>
     <div *ngIf="activatedTabIndex == 3"><p>Panel 4</p></div>

@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="content">
-    <div *ngIf="activatedTabIndex == 0"><app-news></app-news></div>
+    <app-news *ngIf="activatedTabIndex == 0"></app-news>
     <div *ngIf="activatedTabIndex == 1"><p>Panel 2</p></div>
     <div *ngIf="activatedTabIndex == 2"><p>Panel 3</p></div>
     <div *ngIf="activatedTabIndex == 3"><p>Panel 4</p></div>

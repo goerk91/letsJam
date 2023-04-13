@@ -12,15 +12,3 @@ a {
   display: block;
   padding: 8px;
 }
-
-.active {
-  font-weight: bold;
-  color: white;
-  background-color: #f44336;
-  border-radius: 10px 10px 0 0;
-}
-
-.inactive:hover {
-  background-color: #ffebee;
-  border-radius: 10px 10px 0 0;
-}

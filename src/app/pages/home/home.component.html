@@ -6,7 +6,12 @@
       /></a>
     </div>
     <div class="navBarHeader">
-      <app-tabs [tabsArray]="tabs" (onTabChange)="tabChange($event)"></app-tabs>
+      <app-tabs
+        id="test"
+        [tabsArray]="tabs"
+        (onTabChange)="tabChange($event)"
+        id="news"
+      ></app-tabs>
     </div>
   </div>
   <div class="content">

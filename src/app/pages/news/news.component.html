@@ -7,6 +7,9 @@
     ></app-tabs>
   </div>
   <div class="newsContent">
+    <div class="beitrag">
+      <button mat-button (click)="openDialog()">Beitrag verfassen</button>
+    </div>
     <div *ngIf="activatedTabIndex == 0">1</div>
     <div *ngIf="activatedTabIndex == 1">2</div>
     <div *ngIf="activatedTabIndex == 2">3</div>

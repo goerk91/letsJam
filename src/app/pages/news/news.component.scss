@@ -1,1 +1,42 @@
+@import "../../../styles.scss";
 
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.navigation {
+  width: 10%;
+  height: 100%;
+  border-right: 1px solid black;
+  background-color: $background-1;
+}
+
+.newsContent {
+  width: 90%;
+  height: 100%;
+}
+
+.beitrag {
+  height: 10%;
+}
+
+::ng-deep #nav-id .nav .nav-item {
+  width: 100%;
+}
+
+::ng-deep #nav-id .active {
+  background-color: #ff8a80;
+  font-weight: 500;
+  color: white;
+  width: 100%;
+}
+
+::ng-deep #nav-id .inactive:hover {
+  background-color: #ff8a80;
+  color: white;
+}
+
+::ng-deep #nav-id .inactive {
+  color: white;
+}

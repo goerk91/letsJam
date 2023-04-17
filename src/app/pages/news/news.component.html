@@ -1,4 +1,18 @@
-<div>
-  News Component
-  <button>Hello</button>
+<div class="container">
+  <div class="navigation">
+    <app-tabs
+      id="nav-id"
+      [tabsArray]="tabs"
+      (onTabChange)="tabChange($event)"
+    ></app-tabs>
+  </div>
+  <div class="newsContent">
+    <div class="beitrag">
+      <button mat-button (click)="openDialog()">Beitrag verfassen</button>
+    </div>
+    <div *ngIf="activatedTabIndex == 0">1</div>
+    <div *ngIf="activatedTabIndex == 1">2</div>
+    <div *ngIf="activatedTabIndex == 2">3</div>
+    <div *ngIf="activatedTabIndex == 3">4</div>
+  </div>
 </div>

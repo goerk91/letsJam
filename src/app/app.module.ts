@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { OnboardingWizzardComponent } from './onboarding-wizzard/onboarding-wizzard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -16,11 +15,16 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { NewsComponent } from './Pages/news/news.component';
-import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+
+//Components
+import { OnboardingWizzardComponent } from './onboarding-wizzard/onboarding-wizzard.component';
 import { HomeComponent } from './Pages/home/home.component';
+import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.component';
 import { TabsComponent } from './components/tabs/tabs.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,7 @@ import { TabsComponent } from './components/tabs/tabs.component';
     PageNotFoundComponent,
     HomeComponent,
     TabsComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +49,7 @@ import { TabsComponent } from './components/tabs/tabs.component';
     MatCheckboxModule,
     MatButtonModule,
     MatInputModule,
+    MatDialogModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

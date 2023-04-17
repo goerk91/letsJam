@@ -12,14 +12,12 @@
 
 .content {
   width: 100%;
-  height: 60vh;
-  background-color: rgb(224, 234, 224);
+  height: 75vh;
 }
 
 .footer {
   width: 100%;
-  height: 20vh;
-  background-color: yellow;
+  height: 5vh;
 }
 
 .iconHeader {
@@ -27,8 +25,9 @@
   justify-content: center;
   align-items: center;
   width: 30%;
-  height: 100%;
+  height: auto;
   margin-left: 45px;
+  overflow: hidden;
 }
 
 .navBarHeader {
@@ -37,4 +36,16 @@
   width: 70%;
   height: 100%;
   font-size: 25px;
+}
+
+::ng-deep #news .active {
+  font-weight: bold;
+  color: white;
+  background-color: #f44336;
+  border-radius: 10px 10px 0 0;
+}
+
+::ng-deep #news .inactive:hover {
+  background-color: #ffebee;
+  border-radius: 10px 10px 0 0;
 }

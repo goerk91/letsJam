@@ -36,8 +36,9 @@ export class OnboardingWizzardComponent implements OnInit {
 
   onSubmit() {
     //Test
-    console.log('Submitted', this.wizzardForm);
-    this.wizzardForm.valueChanges.subscribe(console.log);
+    // console.log('Submitted', this.wizzardForm);
+    // this.wizzardForm.valueChanges.subscribe(console.log);
+    localStorage.setItem('wizzardData', JSON.stringify(this.wizzardForm.value));
     this.router.navigateByUrl('/home');
   }
 }

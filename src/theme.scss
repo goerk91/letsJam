@@ -5,6 +5,7 @@
 $my-primary: mat.define-palette(mat.$red-palette, 500);
 $my-accent: mat.define-palette(mat.$red-palette, 100);
 $my-warn: mat.define-palette(mat.$red-palette);
+$background-1: #b71c1c;
 
 $my-theme: mat.define-light-theme(
   (

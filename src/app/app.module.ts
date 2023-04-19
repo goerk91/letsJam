@@ -18,6 +18,7 @@ import { NewsComponent } from './Pages/news/news.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 
 //Components
 import { OnboardingWizzardComponent } from './onboarding-wizzard/onboarding-wizzard.component';
@@ -25,6 +26,7 @@ import { HomeComponent } from './Pages/home/home.component';
 import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
     HomeComponent,
     TabsComponent,
     DialogComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
     MatButtonModule,
     MatInputModule,
     MatDialogModule,
+    MatCardModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

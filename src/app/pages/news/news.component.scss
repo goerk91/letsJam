@@ -1,4 +1,4 @@
-@import "../../../styles.scss";
+@import "../../../theme.scss";
 
 .container {
   display: flex;
@@ -13,12 +13,18 @@
 }
 
 .newsContent {
+  padding-left: 20%;
+  padding-top: 50px;
   width: 90%;
   height: 100%;
 }
 
-.beitrag {
+.verfasseBeitrag {
   height: 10%;
+}
+
+.beitragContainer {
+  width: 50%;
 }
 
 ::ng-deep #nav-id .nav .nav-item {

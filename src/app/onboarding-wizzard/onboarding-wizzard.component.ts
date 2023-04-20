@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -27,9 +27,9 @@ export class OnboardingWizzardComponent implements OnInit {
 
     //Parent FormGroup
     this.wizzardForm = this.fb.group({
-      nutzerName: '',
-      hauptinstrument: '',
-      fortschritt: '',
+      nutzerName: ['', Validators.compose([Validators.required])],
+      hauptinstrument: [''],
+      fortschritt: ['', Validators.required],
       genre: genreGroup,
     });
   }

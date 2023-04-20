@@ -63,5 +63,6 @@ import { CardComponent } from './components/card/card.component';
     },
   ],
   bootstrap: [AppComponent],
+  entryComponents: [DialogComponent],
 })
 export class AppModule {}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 //Material UI
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
@@ -22,12 +22,15 @@ export class NewsComponent {
     //remove WizzardData:
     // localStorage.removeItem('wizzardData')
 
-    const dialogConfig = new MatDialogConfig();
+    let dialogConfig = new MatDialogConfig();
 
-    dialogConfig.disableClose = true;
-    // dialogConfig.autoFocus = true;
+    dialogConfig = {
+      disableClose: true,
+      autoFocus: true,
+      height: '500px',
+      width: '600px',
+    };
 
-    localStorage.removeItem('wizzardData');
     this.dialog.open(DialogComponent, dialogConfig);
   }
   tabChange(index: number) {

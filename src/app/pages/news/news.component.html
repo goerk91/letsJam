@@ -7,14 +7,13 @@
     ></app-tabs>
   </div>
   <div class="newsContent">
-    <div class="verfasseBeitrag">
-      <button mat-raised-button color="primary" (click)="openDialog()">
-        Beitrag verfassen
-      </button>
-    </div>
-
     <div class="beitragContainer">
       <div *ngIf="activatedTabIndex == 0">
+        <div class="verfasseBeitrag">
+          <button mat-raised-button color="primary" (click)="openDialog()">
+            Beitrag verfassen
+          </button>
+        </div>
         <app-card></app-card>
       </div>
       <div *ngIf="activatedTabIndex == 1">2</div>

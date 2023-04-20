@@ -5,8 +5,8 @@
 >
   <div class="container">
     <div class="inner-container">
-      <mat-horizontal-stepper [labelPosition]="'bottom'" linear="true">
-        <mat-step label="Name" state="badge">
+      <mat-horizontal-stepper [labelPosition]="'bottom'" linear>
+        <mat-step  label="Name" state="badge"  >
           <div class="content-container">
             <div class="content">
               <mat-form-field>
@@ -37,7 +37,7 @@
             <div class="content">
               <mat-form-field appearance="fill">
                 <mat-label>Main Instrument</mat-label>
-                <mat-select formControlName="hauptinstrument">
+                <mat-select formControlName="hauptinstrument" >
                   <mat-option
                     *ngFor="let instrument of instruments"
                     [value]="instrument"
@@ -86,9 +86,9 @@
                   <mat-chip-option color="primary" selected
                     >Beginer</mat-chip-option
                   >
-                  <mat-chip-option color="accent">Intermediate</mat-chip-option>
-                  <mat-chip-option color="accent">Professional</mat-chip-option>
-                  <mat-chip-option color="accent"
+                  <mat-chip-option color="primary">Intermediate</mat-chip-option>
+                  <mat-chip-option color="primary">Professional</mat-chip-option>
+                  <mat-chip-option color="primary"
                     >Advanced Professional</mat-chip-option
                   >
                 </mat-chip-listbox>
@@ -129,16 +129,16 @@
                 formGroupName="genre"
               >
                 <p>
-                  <mat-checkbox formControlName="hiphop">Hip Hop</mat-checkbox>
+                  <mat-checkbox color="primary" formControlName="hiphop">Hip Hop</mat-checkbox>
                 </p>
                 <p>
-                  <mat-checkbox formControlName="rnb">RnB</mat-checkbox>
+                  <mat-checkbox color="primary"  formControlName="rnb">RnB</mat-checkbox>
                 </p>
                 <p>
-                  <mat-checkbox formControlName="classic">Classic</mat-checkbox>
+                  <mat-checkbox color="primary"  formControlName="classic">Classic</mat-checkbox>
                 </p>
                 <p>
-                  <mat-checkbox formControlName="metal">Metal</mat-checkbox>
+                  <mat-checkbox color="primary"  formControlName="metal">Metal</mat-checkbox>
                 </p>
               </div>
             </div>
